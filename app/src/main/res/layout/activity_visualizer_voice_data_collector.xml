@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pattern_background_tee">
+
+
+
+    <com.panimator.animators.voicevisualizer.VisualizerView
+        android:id="@+id/visualView"
+        android:layout_width="265dp"
+        android:layout_height="265dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:background="#212121"
+        />
+
+    <EditText
+        android:id="@+id/edt_vvl_title"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/visualView"
+        android:hint="Type Title Here"
+        android:textColorHint="#6b6a6a"
+        android:textColor="#212121"
+        android:text="Audio"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="5dp"
+        android:background="#cc7831"/>
+
+    <ImageView
+        android:id="@+id/btn_record_voice"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_mic"
+        android:background="@drawable/round_background"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:tint="@color/colorPrimary"
+        android:layout_centerHorizontal="true"/>
+
+
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/img_import_audio"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/btn_record_voice"
+        android:layout_margin="5dp"
+        android:background="@drawable/round_background"
+        android:padding="14dp"
+        android:tint="@color/colorPrimary"
+        android:layout_toEndOf="@+id/btn_record_voice"
+        app:srcCompat="@drawable/ic_library_music"
+        android:layout_alignBottom="@+id/btn_record_voice" />
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txt_glitch_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#88000000"
+        android:gravity="center"
+        android:hint="Type The Text To Overlay"
+        android:textColorHint="#ababab"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        />
+    <Button
+        android:id="@+id/btn_glitch_fonts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Font"
+        android:background="@drawable/btn_background"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/btn_glitch_next"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="5dp"
+        android:textColor="#FFF"/>
+    <Button
+        android:id="@+id/btn_glitch_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:background="@drawable/btn_background"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="18dp"
+        android:textColor="#FFF"/>
+</RelativeLayout>

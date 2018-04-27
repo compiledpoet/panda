@@ -57,6 +57,7 @@ public class Func {
     }
 
     public static String generateRandomHex(String prefix){
+        int gitTest = 0;
         final int MIN = 10, MAX = 99;
         int body = MIN + randomGenerator.nextInt(MAX - MIN);
         return Integer.toHexString(prefix.hashCode()) + "_" +Integer.toHexString(body) + "_" + Long.toHexString(System.currentTimeMillis());

@@ -16,6 +16,7 @@ import android.view.inputmethod.InputMethodManager;
 
 import com.panimator.R;
 import com.panimator.animators.boidcompiler.BoidCompiler;
+import com.panimator.animators.flipmotion.flipper;
 import com.panimator.animators.glitch.Glitcher;
 import com.panimator.animators.kinetictypography.KineticTypography;
 import com.panimator.animators.motionsnap.MotionSnap;
@@ -54,7 +55,7 @@ public class AndroidAnimatorManager extends RendererManager<AndroidAnimator<Bitm
 
     @Override
     protected AndroidAnimator<Bitmap>[] loadRenders() {
-        return new AndroidAnimator[]{ new KineticTypography(), new VoiceVisualizer(), new Glitcher(), new SlowMo(), new MotionSnap(), new BoidCompiler()};
+        return new AndroidAnimator[]{ new KineticTypography(), new VoiceVisualizer(), new Glitcher(), new SlowMo(), new MotionSnap(), new BoidCompiler(), new flipper()};
     }
 
     @Override

@@ -376,13 +376,27 @@ public abstract class AndroidCameraExtender extends AndroidPlane{
             return options[0];
     }
     private Size getVideoSize(Size[] options){
+        if(options != null)
+            return  new Size(960, 640);
         final double aspectRatio = 0.75;
-        for(int pos = 0; pos < options.length;pos++){
-            Size size = options[pos];
-            if(size.getHeight() * aspectRatio == size.getWidth() && size.getWidth() <= 1080)
-                return size;
+        int width = 640, height = 960;
+        List<Size> possibleSize = new ArrayList<>();
+        for(int pos = 0; pos < options.length; pos++){
+            Size option  = options[pos];
+            if(option.getHeight() * aspectRatio == option.getWidth() && option.getHeight() >= height && option.getWidth() >= width)
+                possibleSize.add(option);
         }
-        return options[options.length - 1];
+
+        if(possibleSize.size() > 0){
+            return Collections.min(possibleSize, new Comparator<Size>() {
+                @Override
+                public int compare(Size o1, Size o2) {
+                    return Long.signum((long) o1.getWidth() * o1.getHeight() -
+                            (long) o2.getWidth() * o2.getHeight());
+                }
+            });
+        }else
+            return options[0];
     }
 
     public boolean isRecording(){

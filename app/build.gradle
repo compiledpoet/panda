@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 repositories {
@@ -33,11 +34,12 @@ dependencies {
     })
     implementation files('libs/jcodec-0.2.2.jar')
     implementation files('libs/jcodec-android-0.2.2.jar')
-    implementation(name:'FFmpegAndroid-0.3.2', ext:'aar')
+    implementation(name: 'FFmpegAndroid-0.3.2', ext: 'aar')
     implementation 'com.android.support:appcompat-v7:27.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.6.+'
     testImplementation 'junit:junit:4.12'
     implementation files('libs/JTransforms-3.1-with-dependencies.jar')
     implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation project(':openCVLibrary341')
 }

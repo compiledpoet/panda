@@ -63,6 +63,7 @@ public abstract class RenderingSession<F> {
 
     public final boolean saveFrame(F frame, String outputPath){
         return this.onSaveFrame(frame, outputPath);
+        
     }
 
     public final void encode(double frameRate){
